@@ -1,0 +1,8 @@
+.weather-img {
+    border-radius: 5px;
+    left: 15px;
+    max-width: 200px;
+    max-height: 450px;
+    position: absolute;
+    top: 200px;
+  }

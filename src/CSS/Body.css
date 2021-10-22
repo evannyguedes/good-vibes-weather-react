@@ -1,0 +1,70 @@
+.hide {
+    color: transparent;
+    text-decoration: transparent;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+  }
+  .sticker-git {
+    left: 235px;
+    max-width: 60px;
+    position: relative;
+    top: -140px;
+  }
+  .hide-git {
+    color: black;
+    bottom: 10px;
+    display: none;
+    font-family: "Finger Paint", cursive;
+    font-size: 10px;
+    left: 220px;
+    position: absolute;
+  }
+  .sticker-git:hover {
+    max-width: 65px;
+  }
+  .sticker-git:hover + .hide-git {
+    display: block;
+  }
+  .sticker-lkd {
+    left: 245px;
+    max-width: 50px;
+    position: relative;
+    top: -140px;
+  }
+  .hide-lkd {
+    bottom: 10px;
+    color: black;
+    display: none;
+    font-family: "Finger Paint", cursive;
+    font-size: 10px;
+    left: 315px;
+    position: absolute;
+  }
+  .sticker-lkd:hover {
+    max-width: 55px;
+  }
+  .sticker-lkd:hover + .hide-lkd {
+    display: block;
+  }
+  .sticker-mj {
+    left: 255px;
+    max-width: 40px;
+    position: relative;
+    top: -140px;
+  }
+  .hide-mj {
+    bottom: 5px;
+    color: black;
+    display: none;
+    font-family: "Finger Paint", cursive;
+    font-size: 10px;
+    left: 245px;
+    position: absolute;
+  }
+  .sticker-mj:hover {
+    max-width: 45px;
+  }
+  .sticker-mj:hover + .hide-mj {
+    display: block;
+  }

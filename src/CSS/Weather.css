@@ -1,0 +1,74 @@
+.city {
+    color: black;
+    font-family: "Cabin Sketch", cursive;
+    font-size: 4vw;
+    margin: 0;
+    padding-left: 15px;
+    padding-top: 12px;
+    width: 100%;
+  }
+  .more-info {
+    color: black;
+    display: block;
+    font-family: "Finger Paint", cursive;
+    font-size: 12px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px 0px 5px 20px;
+    text-align: left;
+    width: 150px;
+  }
+  .weather-description:first-letter {
+    text-transform: capitalize;
+  }
+  .weather.row {
+    margin: 0;
+  }
+  .current.left.col-6 {
+    background-color: transparent;
+    border: none;
+    bottom: 0;
+    box-shadow: none;
+    height: 150px;
+    left: 0;
+    margin: 8px 0;
+    padding: 0;
+    position: absolute;
+    top: 55px;
+    width: 450px;
+  }
+  .current.right.col-6 {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    left: 185px;
+    position: relative;
+    text-align: center;
+    top: 20px;
+    width: 250px;
+  }
+  .size-temperature {
+    height: 145px;
+    text-align: right;
+  }
+  .now-temperature {
+    font-family: "Cabin Sketch", cursive;
+    font-size: 130px;
+    left: 5px;
+    margin: 0;
+    position: relative;
+    text-align: right;
+  }
+  .celsius {
+    font-family: "Cabin Sketch", cursive;
+    font-size: 60px;
+    position: relative;
+    text-align: right;
+    top: -60px;
+  }
+  .under-temp {
+    font-family: "Finger Paint", cursive;
+    font-size: 11px;
+    list-style-type: none;
+    text-align: right;
+  }

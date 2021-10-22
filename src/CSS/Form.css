@@ -1,0 +1,38 @@
+.form-control {
+    border-radius: 7px;
+    box-shadow: -2px 2px 9px rgba(0, 0, 0, 0.4);
+    height: 35px;
+    font-size: 13px;
+    font-family: "Finger Paint", cursive;
+    left: 10px;
+    max-width: 365px;
+    position: relative;
+    text-decoration: solid;
+    top: 20px;
+  }
+  .magni-img {
+    bottom: 12px;
+    left: 380px;
+    position: relative;
+    width: 30px;
+  }
+  .magni-img:hover {
+    width: 31px;
+  }
+  .pin-img {
+    bottom: 12px;
+    left: 375px;
+    position: relative;
+    width: 28px;
+  }
+  .pin-img:hover {
+    width: 30px;
+  }
+  .line-top {
+    border-bottom: 3px solid #fff;
+    display: block;
+    position: relative;
+    top: 3px;
+    width: 100%;
+  }
+  

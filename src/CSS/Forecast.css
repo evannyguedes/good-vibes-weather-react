@@ -1,0 +1,26 @@
+.big-pin {
+    left: 210px;
+    max-width: 60px;
+    position: relative;
+    top: -250px;
+  }
+  .forecast.row {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 5px 5px 2.5px rgb(0, 0, 0, 0.2);
+    left: 230px;
+    margin: 0;
+    max-width: 200px;
+    position: relative;
+    top: 35px;
+  }
+  .forecast.col-6 {
+    font-family: "Finger Paint", cursive;
+    font-size: 13px;
+    margin: 8px 0;
+    text-align: center;
+  }
+  .forecast-min {
+    opacity: 0.5;
+  }
+  
