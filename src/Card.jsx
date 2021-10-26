@@ -17,7 +17,7 @@ export default function Card() {
       }}
     >
       <Form />
-      <Weather />
+      <Weather defaultCity="Berlin" />
       <Forecast />
       <Image />
       <PostIt />

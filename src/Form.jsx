@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import "./CSS/Form.css";
 import pin from "./media/pin.png";
 import magni from "./media/magni.png";
 
 export default function Form() {
+  
   return (
     <div className="Form">
       <form className="form-city" id="formCity">
