@@ -1,19 +1,52 @@
 import React, {useState} from "react";
 import "./CSS/Form.css";
+import axios from "axios";
 import pin from "./media/pin.png";
 import magni from "./media/magni.png";
+import Weather from "./Weather";
 
-export default function Form() {
+export default function Form(props) {
+
+  const [weatherData, setWeatherData] = useState({ready: false});
+  const [city, setCity]= useState(props.defaultCity);
   
+  function handleResponse(response){
+    setWeatherData({
+      ready: true,
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
+    });
+  }
+
+  function search(){
+    const apiKey = "c7e7b1dfe1e083a5f2e3fd381de969ad";
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event){
+    event.preventDefault();
+    search();
+  }
+  
+  function handleCityChange(event){
+    setCity(event.target.value)
+  }
+  if (weatherData.ready){
   return (
     <div className="Form">
-      <form className="form-city" id="formCity">
+      <form onSubmit={handleSubmit} className="form-city" id="formCity">
         <div className="search-cities">
           <input
             type="text"
             placeholder="Enter a city..."
             className="form-control"
             id="showCity"
+            onChange={handleCityChange}
           />
         </div>
         <input
@@ -35,6 +68,11 @@ export default function Form() {
       </form>
       <span className="line-top" />
       <br />
+      <Weather data={weatherData}/>
     </div>
-  );
+    );
+  } else {
+    search();
+    return "Loading...";
+  }
 }
