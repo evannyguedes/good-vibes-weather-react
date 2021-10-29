@@ -4,12 +4,14 @@ import axios from "axios";
 import pin from "./media/pin.png";
 import magni from "./media/magni.png";
 import Weather from "./Weather";
+import Forecast from "./Forecast.jsx";
+import Image from "./Image.jsx";
 
 export default function Form(props) {
 
   const [weatherData, setWeatherData] = useState({ready: false});
   const [city, setCity]= useState(props.defaultCity);
-  
+
   function handleResponse(response){
     setWeatherData({
       ready: true,
@@ -19,6 +21,7 @@ export default function Form(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -69,6 +72,8 @@ export default function Form(props) {
       <span className="line-top" />
       <br />
       <Weather data={weatherData}/>
+      <Forecast />
+      <Image iconData={weatherData}/>
     </div>
     );
   } else {

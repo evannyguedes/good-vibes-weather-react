@@ -1,8 +1,7 @@
 import React from "react";
 import "./CSS/Card.css";
 import Form from "./Form.jsx";
-import Forecast from "./Forecast.jsx";
-import Image from "./Image.jsx";
+
 import PostIt from "./PostIt.jsx";
 import Bottom from "./Bottom.jsx";
 
@@ -16,8 +15,7 @@ export default function Card() {
       }}
     >
       <Form defaultCity="Berlin"/>
-      <Forecast />
-      <Image />
+      
       <PostIt />
       <Bottom />
     </div>
