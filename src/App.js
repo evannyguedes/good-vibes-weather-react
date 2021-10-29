@@ -1,11 +1,11 @@
-import Card from "./Card.jsx";
+import Form from "./Form.jsx";
 
 
 export default function App() {
   return (
     <div className="App">
       <div className="Container">
-        <Card />
+      <Form defaultCity="Berlin"/>
       </div>
     </div>
   );

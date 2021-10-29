@@ -7,6 +7,8 @@ import Weather from "./Weather";
 import Forecast from "./Forecast.jsx";
 import Image from "./Image.jsx";
 import PostIt from "./PostIt.jsx";
+import CardColor from "./CardColor";
+import Bottom from "./Bottom.jsx";
 
 export default function Form(props) {
 
@@ -42,6 +44,12 @@ export default function Form(props) {
   }
   if (weatherData.ready){
   return (
+    <div
+      className="card"
+      style={{
+        background:<CardColor iconData={weatherData}/>
+      }}
+    >
     <div className="Form">
       <form onSubmit={handleSubmit} className="form-city" id="formCity">
         <div className="search-cities">
@@ -76,7 +84,9 @@ export default function Form(props) {
       <Forecast />
       <Image iconData={weatherData}/>
       <PostIt iconData={weatherData}/>
+      <Bottom />
     </div>
+  </div>
     );
   } else {
     search();
