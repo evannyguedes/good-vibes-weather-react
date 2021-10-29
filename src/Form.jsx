@@ -6,6 +6,7 @@ import magni from "./media/magni.png";
 import Weather from "./Weather";
 import Forecast from "./Forecast.jsx";
 import Image from "./Image.jsx";
+import PostIt from "./PostIt.jsx";
 
 export default function Form(props) {
 
@@ -74,6 +75,7 @@ export default function Form(props) {
       <Weather data={weatherData}/>
       <Forecast />
       <Image iconData={weatherData}/>
+      <PostIt iconData={weatherData}/>
     </div>
     );
   } else {

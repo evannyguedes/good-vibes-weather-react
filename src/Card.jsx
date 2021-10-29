@@ -2,7 +2,7 @@ import React from "react";
 import "./CSS/Card.css";
 import Form from "./Form.jsx";
 
-import PostIt from "./PostIt.jsx";
+
 import Bottom from "./Bottom.jsx";
 
 export default function Card() {
@@ -15,8 +15,6 @@ export default function Card() {
       }}
     >
       <Form defaultCity="Berlin"/>
-      
-      <PostIt />
       <Bottom />
     </div>
   );
