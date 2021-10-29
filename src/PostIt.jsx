@@ -6,7 +6,7 @@ export default function PostIt(props) {
 
   return (
     <div className="PostIt">
-      <p class="motivacional" id="message">
+      <p className="motivational" id="message">
         {message()}
       </p>
       <img src={Pink} alt="Pink" class="pink-tape-l" />
@@ -15,8 +15,8 @@ export default function PostIt(props) {
   );
 
 function message(){
-  let motivacionalMessage= props.iconData.icon
-  switch(motivacionalMessage){
+  let motivationalMessage= props.iconData.icon
+  switch(motivationalMessage){
   case "01d":
   return "Life can be beautiful like a sunny day.";
   case "01n":
