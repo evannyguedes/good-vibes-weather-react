@@ -16,10 +16,18 @@
     text-decoration: none;
   }
 
+  .units:hover {
+    color: black;
+    font-size: 35px;
+
+  }
+
   .regular-unit{
+    filter: none;
     font-family: "Cabin Sketch", cursive;
     font-size: 30px;
     position: relative;
     text-align: right;
+    text-decoration: none;
     top: -85px;
   }
