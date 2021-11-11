@@ -9,6 +9,7 @@ import Image from "./Image.jsx";
 import PostIt from "./PostIt.jsx";
 import CardColor from "./CardColor";
 import Bottom from "./Bottom.jsx";
+import "./CSS/Card.css";
 
 export default function Form(props) {
 
@@ -42,15 +43,13 @@ export default function Form(props) {
   function handleCityChange(event){
     setCity(event.target.value)
   }
+ 
+
   if (weatherData.ready){
   return (
-    <div
-      className="card"
-      style={{
-        background:<CardColor iconData={weatherData}/>
-      }}
-    >
-    <div className="Form">
+
+    <div className="card" style={CardColor(weatherData)} >
+      <div className="Form">
       <form onSubmit={handleSubmit} className="form-city" id="formCity">
         <div className="search-cities">
           <input
@@ -58,16 +57,14 @@ export default function Form(props) {
             placeholder="Enter a city..."
             className="form-control"
             id="showCity"
-            onChange={handleCityChange}
-          />
+            onChange={handleCityChange} />
         </div>
         <input
           type="image"
           alt="Magni"
           src={magni}
           className="magni-img"
-          style={{ filter: "none" }}
-        />
+          style={{ filter: "none" }} />
 
         <input
           type="image"
@@ -75,18 +72,18 @@ export default function Form(props) {
           id="btnCurrent"
           src={pin}
           className="pin-img"
-          style={{ filter: "none" }}
-        />
+          style={{ filter: "none" }} />
       </form>
       <span className="line-top" />
       <br />
-      <Weather data={weatherData}/>
+      <Weather data={weatherData} />
       <Forecast />
-      <Image iconData={weatherData}/>
-      <PostIt iconData={weatherData}/>
+      <Image iconData={weatherData} />
+      <PostIt iconData={weatherData} />
       <Bottom />
+      
     </div>
-  </div>
+    </div>
     );
   } else {
     search();

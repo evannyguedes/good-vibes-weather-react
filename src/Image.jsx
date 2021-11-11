@@ -32,7 +32,6 @@ export default function Image(props) {
             <img id="icon" alt="background" src={fewClouds} className="weather-img" />
           </div>
         );
-      break;
       case "03d":
         return (
           <div className="Image">
