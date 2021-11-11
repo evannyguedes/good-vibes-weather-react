@@ -7,9 +7,19 @@
     text-align: right;
   }
   .units {
+    color: black;
+    filter: none;
     font-family: "Cabin Sketch", cursive;
-    font-size: 60px;
+    font-size: 30px;
     position: relative;
     text-align: right;
-    top: -60px;
+    text-decoration: none;
+  }
+
+  .regular-unit{
+    font-family: "Cabin Sketch", cursive;
+    font-size: 30px;
+    position: relative;
+    text-align: right;
+    top: -85px;
   }
