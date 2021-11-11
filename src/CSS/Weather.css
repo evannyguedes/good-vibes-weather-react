@@ -51,21 +51,7 @@
     height: 145px;
     text-align: right;
   }
-  .now-temperature {
-    font-family: "Cabin Sketch", cursive;
-    font-size: 130px;
-    left: 5px;
-    margin: 0;
-    position: relative;
-    text-align: right;
-  }
-  .celsius {
-    font-family: "Cabin Sketch", cursive;
-    font-size: 60px;
-    position: relative;
-    text-align: right;
-    top: -60px;
-  }
+
   .under-temp {
     font-family: "Finger Paint", cursive;
     font-size: 11px;

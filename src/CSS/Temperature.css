@@ -1,0 +1,15 @@
+.now-temperature {
+    font-family: "Cabin Sketch", cursive;
+    font-size: 130px;
+    left: 5px;
+    margin: 0;
+    position: relative;
+    text-align: right;
+  }
+  .units {
+    font-family: "Cabin Sketch", cursive;
+    font-size: 60px;
+    position: relative;
+    text-align: right;
+    top: -60px;
+  }
