@@ -11,89 +11,31 @@ import snow from "./media/snow.png";
 import mist from "./media/mist.png";
 
 export default function Image(props) {
-  let weatherName = props.iconData.icon;
+  const codeMapping = {
+    "01d": sunny,
+    "01n": clearNight,
+    "02d": fewClouds,
+    "02n": cloudyNight,
+    "03d": fewClouds,
+    "03n": cloudyNight,
+    "04d": fewClouds,
+    "04n": cloudyNight,
+    "09d": showerRain,
+    "09n": showerRain,
+    "10d": rain,
+    "10n": rain,
+    "11d": thunderstorm,
+    "11n": thunderstorm,
+    "13d": snow,
+    "13n": snow,
+    "50d": mist,
+    "50n": mist,
+  };
 
-  switch(weatherName){
-    case "01d": 
+  let weatherIcon = codeMapping[props.iconData.icon];
     return (
       <div className="Image">
-        <img id="icon" alt="background" src={sunny} className="weather-img" />
+        <img id="icon" alt="background" src={weatherIcon} className="weather-img" />
       </div>
-    );
-    case "01n":
-      return (
-        <div className="Image">
-          <img id="icon" alt="background" src={clearNight} className="weather-img" />
-        </div>
-      );
-      case "02d":
-        return (
-          <div className="Image">
-            <img id="icon" alt="background" src={fewClouds} className="weather-img" />
-          </div>
-        );
-      case "03d":
-        return (
-          <div className="Image">
-            <img id="icon" alt="background" src={fewClouds} className="weather-img" />
-          </div>
-        );
-      case "04d":
-        return (
-          <div className="Image">
-            <img id="icon" alt="background" src={fewClouds} className="weather-img" />
-          </div>
-        );
-      case "02n":
-        return (
-          <div className="Image">
-            <img id="icon" alt="background" src={cloudyNight} className="weather-img" />
-          </div>
-        );
-      case "03n":
-        return (
-          <div className="Image">
-            <img id="icon" alt="background" src={cloudyNight} className="weather-img" />
-          </div>
-        );
-      case "04n":
-        return (
-          <div className="Image">
-            <img id="icon" alt="background" src={cloudyNight} className="weather-img" />
-          </div>
-        );
-      case "09d":
-        return (
-          <div className="Image">
-            <img id="icon" alt="background" src={showerRain} className="weather-img" />
-          </div>
-        );
-      case "10d":
-        return (
-          <div className="Image">
-            <img id="icon" alt="background" src={rain} className="weather-img" />
-          </div>
-        );
-        case "11d":
-          return (
-            <div className="Image">
-              <img id="icon" alt="background" src={thunderstorm} className="weather-img" />
-            </div>
-          );
-        case "13d":
-          return (
-            <div className="Image">
-              <img id="icon" alt="background" src={snow} className="weather-img" />
-            </div>
-          );
-        default:
-          return (
-            <div className="Image">
-              <img id="icon" alt="background" src={mist} className="weather-img" />
-            </div>
-          );
-
-  }
-
-
+    )
 }
