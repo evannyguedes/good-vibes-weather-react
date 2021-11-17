@@ -1,11 +1,21 @@
 import React from "react";
+import axios from "axios";
 import "./CSS/Forecast.css";
 import pin from "./media/teste.png";
-import sun from "./media/icon-sunny.png";
-import cloud from "./media/icon-few-clouds.png";
-import rain from "./media/icon-shower-rain.png";
+import Icon from "./Icon";
 
-export default function Forecast() {
+
+export default function Forecast(props) {
+
+    let lat = props.data.lat;
+    let lon = props.data.lon;
+
+  function showForecast (){
+    const apiKey ="c7e7b1dfe1e083a5f2e3fd381de969ad"
+    let apiUrl =`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}`
+    axios.get(apiUrl)
+  }
+
   return (
     <div className="Forecast">
       <div className="weather-forecast" id="forecast" />
@@ -13,7 +23,7 @@ export default function Forecast() {
         <div className="forecast col-6">
           WED
           <br />
-          <img id="weatherIcon" src={cloud} alt="cloud" width="40" />
+          <Icon iconData="01d"/>
           <br />
           <span className="forecast-max">15°</span>
           <span className="forecast-min">9°</span>
@@ -21,7 +31,7 @@ export default function Forecast() {
         <div className="forecast col-6">
           THU
           <br />
-          <img id="weatherIcon" src={sun} alt="sun" width="40" />
+          <Icon iconData="01d"/>
           <br />
           <span className="forecast-max">17°</span>
           <span className="forecast-min">9°</span>
@@ -29,7 +39,7 @@ export default function Forecast() {
         <div className="forecast col-6">
           FRI
           <br />
-          <img id="weatherIcon" src={rain} alt="rain" width="40" />
+          <Icon iconData="10d"/>
           <br />
           <span className="forecast-max">16°</span>
           <span className="forecast-min">5°</span>
@@ -37,7 +47,7 @@ export default function Forecast() {
         <div className="forecast col-6">
           SAT
           <br />
-          <img id="weatherIcon" src={cloud} alt="cloud" width="40" />
+          <Icon iconData="02d"/>
           <br />
           <span className="forecast-max">15°</span>
           <span className="forecast-min">7°</span>
@@ -45,7 +55,7 @@ export default function Forecast() {
         <div className="forecast col-6">
           SUN
           <br />
-          <img id="weatherIcon" src={sun} alt="sun" width="40" />
+          <Icon iconData="01d"/>
           <br />
           <span className="forecast-max">18°</span>
           <span className="forecast-min">10°</span>
@@ -53,7 +63,7 @@ export default function Forecast() {
         <div className="forecast col-6">
           MON
           <br />
-          <img id="weatherIcon" src={sun} alt="sun" width="40" />
+          <Icon iconData="01d"/>
           <br />
           <span className="forecast-max">16°</span>
           <span className="forecast-min">8°</span>

@@ -1,34 +1,37 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
+import "./CSS/Forecast.css";
+import sun from "./media/icon-sunny.png";
+import cloud from "./media/icon-few-clouds.png";
+import rain from "./media/icon-shower-rain.png";
+import mist from "./media/icon-mist.png";
+import snow from "./media/icon-snow.png";
+import thunderstorm from "./media/icon-thunderstorm.png";
+import showerRain from "./media/icon-shower-rain.png";
 
 export default function WeatherIcon(props) {
   const codeMapping = {
-    "01d": "CLEAR_DAY",
-    "01n": "CLEAR_NIGHT",
-    "02d": "PARTLY_CLOUDY_DAY",
-    "02n": "PARTLY_CLOUDY_NIGHT",
-    "03d": "PARTLY_CLOUDY_DAY",
-    "03n": "PARTLY_CLOUDY_NIGHT",
-    "04d": "CLOUDY",
-    "04n": "CLOUDY",
-    "09d": "RAIN",
-    "09n": "RAIN",
-    "10d": "RAIN",
-    "10n": "RAIN",
-    "11d": "RAIN",
-    "11n": "RAIN",
-    "13d": "SNOW",
-    "13n": "SNOW",
-    "50d": "FOG",
-    "50n": "FOG",
+    "01d": sun,
+    "01n": sun,
+    "02d": cloud,
+    "02n": cloud,
+    "03d": cloud,
+    "03n": cloud,
+    "04d": cloud,
+    "04n": cloud,
+    "09d": showerRain,
+    "09n": showerRain,
+    "10d": rain,
+    "10n": rain,
+    "11d": thunderstorm,
+    "11n": thunderstorm,
+    "13d": snow,
+    "13n": snow,
+    "50d": mist,
+    "50n": mist,
   };
-
+  
+  let forecastIcon = codeMapping[props.iconData]
   return (
-    <ReactAnimatedWeather
-      icon={codeMapping[props.code]}
-      color="#1e1e1e"
-      size={props.size}
-      animate={true}
-    />
+    <img id="weatherIcon" src={forecastIcon} alt="cloud" width="40" />
   );
 }

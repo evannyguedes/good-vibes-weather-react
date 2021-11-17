@@ -26,6 +26,8 @@ export default function Form(props) {
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
     });
   }
 
@@ -77,7 +79,7 @@ export default function Form(props) {
       <span className="line-top" />
       <br />
       <Weather data={weatherData} />
-      <Forecast />
+      <Forecast data={weatherData}/>
       <Image iconData={weatherData} />
       <PostIt iconData={weatherData} />
       <Bottom />
