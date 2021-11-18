@@ -32,6 +32,6 @@ export default function WeatherIcon(props) {
   
   let forecastIcon = codeMapping[props.iconData]
   return (
-    <img id="weatherIcon" src={forecastIcon} alt="cloud" width="40" />
+    <img id="weatherIcon" src={forecastIcon} alt="icon" width="40" />
   );
 }
