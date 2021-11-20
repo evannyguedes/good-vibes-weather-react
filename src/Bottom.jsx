@@ -7,11 +7,11 @@ import Pixabay from "./media/mj.png";
 function goGitHub(){
   return window.open("https://github.com/evannyguedes/Good-vibes-weather-app", "_blank")}
 
-  function goLinkedin(){
-    return window.open("https://www.linkedin.com/in/%C3%A9vanny-guedes-belarmino-971777123/", "_blank")}
+function goLinkedin(){
+  return window.open("https://www.linkedin.com/in/%C3%A9vanny-guedes-belarmino-971777123/", "_blank")}
   
-    function goMJ(){
-      return window.open("https://pixabay.com/pt/users/la_petite_femme-2212305/", "_blank")}
+function goMJ(){
+  return window.open("https://pixabay.com/pt/users/la_petite_femme-2212305/", "_blank")}
 
 export default function Bottom() {
   return (

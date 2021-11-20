@@ -21,21 +21,21 @@ export default function Forecast(props) {
   if(loaded){
     return (
       <div>
-      <div className="Forecast">
-        <div className="weather-forecast" id="forecast" />
-        <div className="forecast row">
-          {forecast.map(function (dailyForecast, index){
-            if (index < 6){
-          return(
-        <div className="forecast col-6">
+        <div className="Forecast">
+          <div className="weather-forecast" id="forecast" />
+          <div className="forecast row">
+            {forecast.map(function (dailyForecast, index){
+              if (index < 6){
+            return(
+          <div className="forecast col-6">
             <Days data={dailyForecast} />
           </div>
           );
-            } else{
+              } else{
               return null;
           }
           })}
-        </div>
+          </div>
         </div>
         <img src={pin} alt="Pin" className="big-pin" />
         <br />
