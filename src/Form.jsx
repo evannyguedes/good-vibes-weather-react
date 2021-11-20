@@ -45,6 +45,19 @@ export default function Form(props) {
   function handleCityChange(event){
     setCity(event.target.value)
   }
+
+
+  function findMe(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(function(position) {
+    const apiKey = "c7e7b1dfe1e083a5f2e3fd381de969ad";
+    let lat = position.coords.latitude; 
+    let lon = position.coords.longitude;
+    let urlApi= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+    axios.get(urlApi).then(handleResponse);
+  }); 
+  }
+
  
 
   if (weatherData.ready){
@@ -74,7 +87,8 @@ export default function Form(props) {
           id="btnCurrent"
           src={pin}
           className="pin-img"
-          style={{ filter: "none" }} />
+          style={{ filter: "none" }}
+          onClick={findMe} />
       </form>
       <span className="line-top" />
       <br />
