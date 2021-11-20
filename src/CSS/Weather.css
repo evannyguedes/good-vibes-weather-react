@@ -1,5 +1,5 @@
 .city {
-    color: black;
+    
     font-family: "Cabin Sketch", cursive;
     font-size: 4vw;
     margin: 0;
@@ -8,15 +8,17 @@
     width: 100%;
   }
   .more-info {
-    color: black;
+    
     display: block;
     font-family: "Finger Paint", cursive;
     font-size: 12px;
     list-style-type: none;
     margin: 0px;
     padding: 0px 0px 5px 20px;
+    position: relative;
     text-align: left;
     width: 150px;
+    z-index: 5;
   }
   .weather-description:first-letter {
     text-transform: capitalize;

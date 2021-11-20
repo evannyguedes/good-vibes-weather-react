@@ -5,4 +5,5 @@
     max-height: 450px;
     position: absolute;
     top: 200px;
+    z-index: 4;
   }

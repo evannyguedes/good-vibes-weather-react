@@ -10,11 +10,13 @@ import PostIt from "./PostIt.jsx";
 import CardColor from "./CardColor";
 import Bottom from "./Bottom.jsx";
 import "./CSS/Card.css";
+import BtnColor from "./BtnColor";
 
 export default function Form(props) {
 
   const [weatherData, setWeatherData] = useState({ready: false});
   const [city, setCity]= useState(props.defaultCity);
+
 
   function handleResponse(response){
     setWeatherData({
@@ -79,7 +81,7 @@ export default function Form(props) {
           alt="Magni"
           src={magni}
           className="magni-img"
-          style={{ filter: "none" }} />
+          style={BtnColor(weatherData)} />
 
         <input
           type="image"
@@ -87,7 +89,7 @@ export default function Form(props) {
           id="btnCurrent"
           src={pin}
           className="pin-img"
-          style={{ filter: "none" }}
+          style={BtnColor(weatherData)}
           onClick={findMe} />
       </form>
       <span className="line-top" />

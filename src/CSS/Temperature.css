@@ -7,27 +7,20 @@
     text-align: right;
   }
   .units {
-    color: black;
     filter: none;
     font-family: "Cabin Sketch", cursive;
     font-size: 30px;
     position: relative;
     text-align: right;
     text-decoration: none;
-  }
-
-  .units:hover {
-    color: black;
-    font-size: 35px;
-
   }
 
   .regular-unit{
     filter: none;
     font-family: "Cabin Sketch", cursive;
-    font-size: 30px;
+    font-size: 50px;
     position: relative;
     text-align: right;
     text-decoration: none;
-    top: -85px;
+    top: -65px;
   }
